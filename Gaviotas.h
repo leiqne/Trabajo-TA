@@ -2,17 +2,21 @@
 #include "Aves.h"
 class Gaviotas : public Aves
 {
-private: 
+private:
 
 public:
 	Gaviotas();
 	~Gaviotas();
 	void mostrar();
-
+	void mostrarMuert()
+	{
+		Console::ForegroundColor = ConsoleColor::Red;
+		Console::SetCursorPosition(x, y); cout << "*~.";
+	}
 
 };
 
-Gaviotas::Gaviotas() :Aves(2,1,1)
+Gaviotas::Gaviotas() :Aves(3, 1, 1)
 {
 
 }
@@ -23,5 +27,5 @@ Gaviotas::~Gaviotas()
 
 void Gaviotas::mostrar() {
 	Console::ForegroundColor = ConsoleColor::White;
-	Console::SetCursorPosition(x, y); cout << " \\ /";
+	Console::SetCursorPosition(x, y); cout << "\\ /";
 }

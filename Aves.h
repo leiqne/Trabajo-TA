@@ -15,7 +15,7 @@ protected:
 	int alto;
 	int id;
 public:
-	Aves(int ancho, int alto,int id);
+	Aves(int ancho, int alto, int id);
 	~Aves();
 	int getX();
 	int getY();
@@ -26,18 +26,19 @@ public:
 	void borrar();
 	void mover();
 	virtual void mostrar() {}
+	virtual void mostrarMuert() {}
 
 
 };
 
-Aves::Aves(int ancho, int alto,int id)
+Aves::Aves(int ancho, int alto, int id)
 {
 	this->alto = alto;
 	this->ancho = ancho;
 	this->id = id;
 	x = rand() % (ANCHO - ancho);
-	y = rand() % (ALTO - alto);
-	dx = rand() % 10 + 1;
+	y = rand() % (ALTO / 2);
+	dx = rand() % 3 + 1;
 
 }
 
