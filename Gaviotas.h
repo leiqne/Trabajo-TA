@@ -12,7 +12,7 @@ public:
 
 };
 
-Gaviotas::Gaviotas() :Aves(3,1,1)
+Gaviotas::Gaviotas() :Aves(2,1,1)
 {
 
 }
